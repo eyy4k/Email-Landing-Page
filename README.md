@@ -25,3 +25,5 @@ JavaScript (Vanilla, modular DOM manipulation)
 
 🔧 Clone the Repo
 
+https://github.com/eyy4k/Email-Landing-Page.git
+
