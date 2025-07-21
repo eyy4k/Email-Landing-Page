@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creative Agency Training</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
@@ -18,8 +19,8 @@
 
         /* --- General & Body Styling --- */
         :root {
-            /* CHANGED: Made the yellow more vibrant */
-            --primary-yellow: #FFD700; 
+
+            --primary-yellow: #FFD700;
             --dark-bg: #121212;
             --text-light: #e5e7eb;
             --text-dark: #1f2937;
@@ -40,7 +41,7 @@
             overflow-x: hidden;
             position: relative;
         }
-        
+
         /* --- Background Geometric Lines --- */
         .background-lines {
             position: absolute;
@@ -57,8 +58,8 @@
             content: '';
             position: absolute;
             left: 50%;
-            top: 350px; /* Position relative to the main content area */
-            transform: translateX(-50%) rotate(45deg);
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
             width: 70vw;
             height: 70vw;
             max-width: 800px;
@@ -67,12 +68,13 @@
         }
 
         .background-lines::after {
-            transform: translateX(-50%) rotate(-45deg);
+            transform: translate(-50%, -50%) rotate(-45deg);
             width: 65vw;
             height: 65vw;
             max-width: 750px;
             max-height: 750px;
         }
+
 
         /* --- Main Layout Container --- */
         .container {
@@ -82,7 +84,7 @@
             position: relative;
             z-index: 1;
         }
-        
+
         /* --- Header --- */
         header p {
             color: var(--primary-yellow);
@@ -96,22 +98,22 @@
 
         /* --- Main Content --- */
         main h1 {
-       
+
             font-size: 2.3rem;
             font-weight: 700;
             line-height: 1.6;
- 
+
         }
 
         main h2 {
-            
+
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--text-light);
             font-weight: 400;
             margin: 1.7rem 0 2rem;
         }
-        
+
         /* --- Video Placeholder --- */
         .video-container {
             position: relative;
@@ -120,16 +122,21 @@
             margin: 0 auto;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: solid 2.5px white;
         }
-        
+
         .video-container img {
             width: 100%;
             display: block;
             opacity: 0.8;
-            border: solid 2px white;
+            transition: filter ease;
         }
-        
+
+        .video-container img:hover {
+            filter: blur(6px);
+        }
+
         .play-button {
             position: absolute;
             top: 50%;
@@ -137,10 +144,10 @@
             transform: translate(-50%, -50%);
             font-size: 5rem;
             color: rgba(255, 255, 255, 0.9);
-            text-shadow: 0 0 20px rgba(0,0,0,0.7);
+            text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
             transition: transform 0.2s ease, color 0.2s ease;
         }
-        
+
         .video-container:hover .play-button {
             transform: translate(-50%, -50%) scale(1.1);
             color: #fff;
@@ -172,7 +179,7 @@
             display: flex;
             justify-content: center;
             gap: 1rem;
-            margin: 2rem auto 0;
+            margin: 2rem auto 2rem;
         }
 
         .icon-link {
@@ -191,50 +198,52 @@
             text-decoration: none !important;
 
         }
-        
-       
+
+
         .icon-link i {
             font-size: 1.4rem;
             color: var(--primary-yellow);
             transition: color 0.2s ease;
         }
-        
-   
+
+
         .icon-link:hover i {
             color: var(--text-light);
         }
+
         /* --- Footer --- */
         footer {
-            padding-top: 4rem;
+            padding-bottom: 20px;
+            border: 2px dotted #4b5563;
         }
 
         .disclaimer {
-            border: 2px dotted #4b5563;
+
             padding: 1.5rem;
             font-size: 0.75rem;
             color: #9ca3af;
             line-height: 1.6;
             max-width: 700px;
-            margin: 0 auto 3rem;
         }
-        
+
         .footer-links {
             color: #9ca3af;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
-        
+
         .footer-links a {
             color: #9ca3af;
             text-decoration: none;
+            font-size: 0.9rem;
         }
-        
+
         .footer-links a:hover {
             text-decoration: underline;
         }
-        
+
         .footer-links p {
-            margin-top: 0.5rem;
-            font-size: 0.8rem;
+            margin-top: 0.6rem;
+            font-size: 0.9rem;
         }
 
         /* --- Popup Modal --- */
@@ -259,14 +268,14 @@
             width: 90%;
             max-width: 400px;
             position: relative;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
         }
-        
+
         .modal-content h3 {
             margin-bottom: 0.5rem;
             font-size: 1.5rem;
         }
-        
+
         .modal-content p {
             margin-bottom: 1.5rem;
             color: var(--text-light);
@@ -281,7 +290,7 @@
             cursor: pointer;
             line-height: 1;
         }
-        
+
         .close-button:hover {
             color: #fff;
         }
@@ -297,7 +306,7 @@
             font-size: 1rem;
             font-family: 'Poppins', sans-serif;
         }
-        
+
         .signup-form input::placeholder {
             color: #9ca3af;
         }
@@ -324,16 +333,18 @@
             main h1 {
                 font-size: 2.2rem;
             }
+
             main h2 {
                 font-size: 1.2rem;
             }
+
             .container {
                 padding: 1rem;
             }
         }
-        
     </style>
 </head>
+
 <body>
 
     <div class="background-lines"></div>
@@ -346,16 +357,16 @@
         <main>
             <h1>Learn To Create Your $45,000/Month Creative Agency In Less Than 6 Months</h1>
             <h2>Utilizing the "GC Model" and without using a single penny spent on ads...</h2>
-            
+
             <div class="video-container" id="videoPlaceholder">
                 <img src="pictures/yt.png" alt="Video thumbnail showing a man talking">
                 <div class="play-button">
                     <i class="fa-solid fa-circle-play"></i>
                 </div>
             </div>
-            
+
             <button class="cta-button" id="ctaButton">GET THE FREE TRAINING</button>
-            
+
             <div class="social-icons">
                 <a href="#" class="icon-link"><i class="fa-brands fa-youtube"></i></a>
                 <a href="#" class="icon-link"><i class="fa-brands fa-instagram"></i></a>
@@ -367,18 +378,25 @@
 
         <footer>
             <div class="disclaimer">
-                <p>This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+                <p>This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT
+                    endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
                 <br>
-                <p>DISCLAIMER: The sales figures stated above are my personal sales figures. Please understand my results are not typical, I'm not implying you'll duplicate them (or do anything for that matter). I am an experienced marketer. The average person who buys any "how to" information gets little to no results. I'm using these references for example purposes only. Your results will vary and depend on many factors... including but not limited to your background, experience, and work ethic. All business entails risk as well as massive and consistent effort and action. If you're not willing to accept that, please DO NOT WATCH THIS FREE TRAINING.</p>
+                <p>DISCLAIMER: The sales figures stated above are my personal sales figures. Please understand my
+                    results are not typical, I'm not implying you'll duplicate them (or do anything for that matter). I
+                    am an experienced marketer. The average person who buys any "how to" information gets little to no
+                    results. I'm using these references for example purposes only. Your results will vary and depend on
+                    many factors... including but not limited to your background, experience, and work ethic. All
+                    business entails risk as well as massive and consistent effort and action. If you're not willing to
+                    accept that, please DO NOT WATCH THIS FREE TRAINING.</p>
             </div>
-            
+
             <div class="footer-links">
                 <a href="#">Privacy Policy</a>
                 <p>© growcreatives. All rights reserved.</p>
             </div>
         </footer>
     </div>
-    
+
     <div class="modal-overlay" id="signupModal">
         <div class="modal-content">
             <span class="close-button" id="closeBtn">&times;</span>
@@ -428,7 +446,7 @@
                     closeModal();
                 }
             });
-            
+
             // Handle form submission
             signupForm.addEventListener('submit', (event) => {
                 event.preventDefault(); // Prevent the form from actually submitting
@@ -440,4 +458,5 @@
         });
     </script>
 </body>
+
 </html>
