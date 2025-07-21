@@ -22,3 +22,6 @@ HTML5
 CSS3 (Custom styling with Flexbox & variables)
 
 JavaScript (Vanilla, modular DOM manipulation)
+
+🔧 Clone the Repo
+
