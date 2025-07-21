@@ -24,6 +24,6 @@ CSS3 (Custom styling with Flexbox & variables)
 JavaScript (Vanilla, modular DOM manipulation)
 
 🔧 Clone the Repo
-
-https://github.com/eyy4k/Email-Landing-Page.git
+[
+https://github.com/eyy4k/Email-Landing-Page.git](https://eyy4k.github.io/Email-Landing-Page/)
 
